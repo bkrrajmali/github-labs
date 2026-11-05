@@ -26,7 +26,7 @@ jobs:
     steps:
         - name: Show Event
           env:
-            EVENT_NAME: ${{ github.event }}
+            EVENT_NAME: ${{ github.event_name }}
             TARGET: ${{ inputs.environment }}
 
           run: |
