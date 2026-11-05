@@ -1,0 +1,22 @@
+name: Lab -04 Runners Example
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          uname -a
+          cat /etc/os-release
+          df -h
+          free -h
+  windows:
+    runs-on: windows-latest
+    steps:
+      - shell: pwsh
+        run: |
+          systeminfo | find "System Boot Time"
+
+    
