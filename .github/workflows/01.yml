@@ -20,5 +20,5 @@ jobs:
         run: |
           git --version
           python3 --version
-          focker --version
+          docker --version
           
