@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: Generate Build Version
         id: version
-        run: echo "number=1.0.${GITHUB_RUN_NUMBER}" >> "$GITHUB_OUTPUT
+        run: echo "number=1.0.${GITHUB_RUN_NUMBER}" >> "$GITHUB_OUTPUT"
