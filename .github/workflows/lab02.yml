@@ -5,7 +5,7 @@ on:
   push: 
     branches: [prod]
     paths: 
-      - ".github/workflows/lab02.yaml
+      - ".github/workflows/lab02.yaml"
 
   pull_request:
     branches: [main]
