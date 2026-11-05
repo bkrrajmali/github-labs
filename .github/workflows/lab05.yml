@@ -1,0 +1,15 @@
+name: Lab 05 - Job Dependency
+
+on: 
+  workflow_dispatch: 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    outputs:
+      version: ${{ steps.version.outputs.number }}
+    steps:
+      - name: Generate Build Version
+        id: version
+        run: echo "number=1.0.${GITHUB_RUN_NUMBER}" >> "$GITHUB_OUTPUT
