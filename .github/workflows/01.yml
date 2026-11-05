@@ -1,0 +1,24 @@
+name: Lab 01 - Hello GitHub Actions
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Welcome Message
+        run: echo "Welcome To GitHUb Actions"
+      - name: Display runner Information
+        run: |
+          echo "Runner OS: $RUNNER_OS"
+          echo "Repository: $GITHUB_REPOSITORY
+          echo "Workflow: $GITHUB_WORKFLOW
+      - name: Checked Installed Tools
+        run: |
+          git --version
+          python3 --version
+          focker --version
+          
