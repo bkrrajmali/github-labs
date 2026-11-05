@@ -12,4 +12,13 @@ jobs:
     steps:
       - name: Generate Build Version
         id: version
-        run: echo "number=1.0.${GITHUB_RUN_NUMBER}" >> "$GITHUB_OUTPUT"
+        run: echo "number=1.0.${GITHUB_RUN_NUMBER}" >> "$GITHUB_OUTPUT
+      - name: Print Github Output
+        run: echo "$GITHUB_OUTPUT"
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run tests
+        run: echo "testing Version ${{ needs.build.outputs.version }}"
