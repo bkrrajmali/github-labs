@@ -20,10 +20,10 @@ on:
           - dev
           - test
           - prod
-  jobs:
-    trigger-demo:
-      runs-on: ubuntu-latest
-      steps:
+jobs:
+  trigger-demo:
+    runs-on: ubuntu-latest
+    steps:
         - name: Show Event
           env:
             EVENT_NAME: ${{ github.event }}
