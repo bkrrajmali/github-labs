@@ -1,4 +1,4 @@
-name: Lab 04 Runners Example
+name: Lab 04 - Runners Example
 
 on: 
   workflow_dispatch:
